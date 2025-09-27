@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_render_partial',
     'about',
     'services',
+    'portfolio',
 ]
 
 MIDDLEWARE = [

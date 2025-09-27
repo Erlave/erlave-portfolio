@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('erlave/' ,views.serv_view, name='services'),
+    path('erlave/' ,views.port_view, name='portfolio'),
 ]
     
 

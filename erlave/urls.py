@@ -25,6 +25,7 @@ urlpatterns = [
     path('' ,include('home.url') ),
     path('about/' ,include('about.url') ),
     path('services/' ,include('services.url') ),
+    path('portfolio/' ,include('portfolio.url') ),
 
 
 ]   
