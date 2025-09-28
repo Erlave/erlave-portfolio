@@ -6,7 +6,7 @@
                     <div class="bord">
                         <!-- Logo -->
                         <a class="logo icon-img-70" href="#">
-                            <img alt="logo" src="assets/imgs/logo-light.png" />
+                            <img alt="logo" src= "{{site_setting.logo}}" />
                         </a>
                     </div>
                 </div>
@@ -59,20 +59,20 @@
                     <div class="bord d-flex justify-content-end">
                         <ul class="social d-flex rest">
                             <li>
-                                <a href="#0">
+                                <a href= {{site_setting.linkdin_link}}>
                                     <i class="fab fa-linkedin-in">
                                     </i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#0">
-                                    <i class="fab fa-behance">
+                                <a href={{site_setting.instagram_link}}>
+                                    <i class="fab fa-instagram">
                                     </i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#0">
-                                    <i class="fab fa-dribbble">
+                                <a href={{site_setting.github_link}}>
+                                    <i class="fab fa-github">
                                     </i>
                                 </a>
                             </li>
