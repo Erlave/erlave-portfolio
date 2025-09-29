@@ -17,13 +17,13 @@
                                         <div class="item1 box-shadwo">
                                             <div class="circle-item d-flex align-items-center justify-content-center">
                                                 <h6>
-                                                    <a href="about.html">
+                                                    <a href={% url "about" %}>
                                                         درباره ما
                                                     </a>
                                                 </h6>
                                             </div>
                                             <div class="text-center mt-30">
-                                                <a href="#0">
+                                                <a href={% url "about" %}>
                                                     <svg class="arrow-down" style="stroke-width: 2;"
                                                         viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
                                                         </line>
                                                     </svg>
                                                     <p class="fz-13 mt-15">
-                                                        دانلود رزومه
+                                                        دیدن رزومه
                                                     </p>
                                                 </a>
                                             </div>
@@ -46,12 +46,12 @@
                                                 class="sub-item1 box-shadwo d-flex align-items-center justify-content-center">
                                                 <div class="text-center">
                                                     <h2 class="fw-700">
-                                                        ۸
+                                                    {{home.experience}}
                                                     </h2>
                                                     <p class="fz-13">
                                                         سال
                                                         <br />
-                                                        از تجربه
+                                                         تجربه
                                                     </p>
                                                 </div>
                                             </div>
@@ -62,7 +62,7 @@
                                     <div class="item-down box-shadwo d-flex align-items-center">
                                         <div>
                                             <div class="circle-item d-flex align-items-center justify-content-center">
-                                                <a href="services.html">
+                                                <a href={% url "services" %}>
                                                     <svg class="arrow-right" style="stroke-width: 2;"
                                                         viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
                                                         xmlns="http://www.w3.org/2000/svg"
@@ -78,20 +78,24 @@
                                             </div>
                                         </div>
                                         <h6 class="ml-15">
-                                            <a href="services.html">
+                                            <a href={% url "services" %}>
                                                 خدمات ما
                                             </a>
                                         </h6>
                                     </div>
                                 </div>
                                 <div class="box2">
-                                    <div class="item3 box-shadwo">
-                                            
-                                       {% comment %} <img alt="" src={% static "/imgs/header/icon1.jpg" %} /> {% endcomment %}
+                                    <div class="item3 box-shadwo" style=" width: 150px;
+                                                height: 145px;
+                                                background-image: url('{{home.image.url}}');
+                                                background-size: cover;
+                                                border-radius: 50px 50px 0 50px;">
+                                        
+
                                     </div>
                                     <div class="item4 box-shadwo d-flex align-items-center">
                                         <h6>
-                                            <a href="portfolio.html">
+                                            <a href={% url "portfolio" %}>
                                                 نمونه کارها ما
                                             </a>
                                         </h6>
@@ -122,42 +126,42 @@
                         <div class="author-profile">
                             <div class="author-img">
                                 <div class="img">
-                                    <img alt="" src="/imgs/header/icon1.jpg" />
+                                    <img alt="" src={{home.image.url}} />
                                 </div>
                             </div>
                             <div class="author-info">
                                 <div class="text-center">
                                     <span class="main-color sub-title mb-10">
-                                        طراح UI / UX
+                                        {{home.title_2_of_3}}
                                     </span>
                                     <h4 class="fw-500">
-                                        سلام ، من پارسا هستم
+                                        سلام ، من {{site_setting.site_name}} هستم
                                     </h4>
                                 </div>
                                 <div class="social mt-20">
-                                    <a class="icon" href="#0">
+                                    <a class="icon" href={{site_setting.linkdin_link}}>
                                         <i class="fab fa-linkedin-in">
                                         </i>
                                     </a>
-                                    <a class="icon" href="#0">
-                                        <i class="fab fa-behance">
+                                    <a class="icon" href={{site_setting.instagram_link}}>
+                                        <i class="fab fa-instagram">
                                         </i>
                                     </a>
-                                    <a class="icon" href="#0">
-                                        <i class="fab fa-dribbble">
+                                    <a class="icon" href={{site_setting.github_link}}>
+                                        <i class="fab fa-github">
                                         </i>
                                     </a>
                                 </div>
                             </div>
                             <div class="butns mt-30">
-                                <a class="inf-butn" data-scroll-nav="4" href="#0">
+                                <a class="inf-butn" data-scroll-nav="4" href={% url "contact" %}>
                                     <span>
                                         با ما تماس بگیرید
                                     </span>
                                 </a>
-                                <a class="inf-butn" href="#0">
+                                <a class="inf-butn" href={% url "portfolio" %}>
                                     <span>
-                                        دانلود CV
+                                        دیدن رزومه
                                     </span>
                                 </a>
                             </div>
@@ -170,48 +174,46 @@
                                     سلام ، من 
                                 </span>
                                 <span class="cd-words-wrapper main-color">
-                                    <b class="is-visible">
-                                        پارسا
-                                    </b>
-                                    <b>
-                                        توسعه دهنده فرانت‌اند
-                                    </b>
-                                    <b>
-                                        طراح UI/UX
-                                    </b>
-                                    
+                                    {% if hello %}
+                                        {% for hellos in hello %}
+                                            <b class="is-visible">
+                                                {{hellos.title}}
+                                            </b>
+                                        {% endfor %}
+                                    {% else %}
+                                    {{site_setting.site_name}}
+                                    {% endif %}
                                 </span>
                                 هستم
                             </h5>
                             <h1>
-                                من توسعه دهنده فرانت و
+                               {{home.title_1_of_3}}
                                 <span class="bord">
-                                    طراح UX / UI
+                                    {{home.title_2_of_3}}
                                 </span>
-                                 در تهران هستم.
+                                 {{home.title_3_of_3}}
                             </h1>
                             <p class="text">
-                                من برای آژانس‌ها کار از راه دور انجام داده‌ام، به استارت‌آپ‌ها مشاوره داده‌ام و با افراد با استعداد برای ایجاد محصولات دیجیتالی برای استفاده تجاری و مصرف‌کننده همکاری کرده‌ام.
-
+                                {{home.descreption}}
                             </p>
                             <div class="stauts mt-50 pt-50 bord-thin-top">
                                 <div class="d-flex align-items-center">
                                     <div class="mr-40">
                                         <div class="d-flex align-items-center">
                                             <h2>
-                                                ۵۰
+                                                {{home.complate_projects}}
                                             </h2>
                                             <p>
-                                                کامل
-                                                <br />
                                                 پروژه
+                                                <br />
+                                                کامل
                                             </p>
                                         </div>
                                     </div>
                                     <div class="mr-40">
                                         <div class="d-flex align-items-center">
                                             <h2>
-                                                ۶۰۰
+                                                {{home.customer}}
                                             </h2>
                                             <p>
                                                 مشتری
@@ -222,7 +224,7 @@
                                     </div>
                                     <div class="ml-auto">
                                         <div class="butn-presv">
-                                            <a class="butn butn-md butn-bord radius-5 skew" href="contact.html">
+                                            <a class="butn butn-md butn-bord radius-5 skew" href={% url "contact" %}>
                                                 <span>
                                                     من را استخدام کن!
                                                 </span>

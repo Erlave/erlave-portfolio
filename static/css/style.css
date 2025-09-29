@@ -3038,7 +3038,7 @@ body.loaded {
 .hero .intro .box2 .item3 {
   width: 150px;
   height: 145px;
-  background-image: url(../imgs/header/profile.jpg);
+  background-image: url;
   background-size: cover;
   border-radius: 50px 50px 0 50px;
 }
