@@ -247,7 +247,7 @@ figure {
 }
 
 img {
-  width: 100%;
+  width: 200%;
   height: auto;
 }
 
@@ -3236,7 +3236,7 @@ body.loaded {
   border-radius: 0 30px 30px 30px;
 }
 
-.author-profile .author-img {
+.author-profile .author- {
   padding: 40px;
 }
 
