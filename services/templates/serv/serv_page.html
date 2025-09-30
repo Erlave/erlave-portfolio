@@ -81,26 +81,28 @@
                                     </h6>
                                 </div>
                             </div>
+
                             <h3>
-                                قیمت گذاری شگفت انگیز برای پروژه های شما
+                                {{plan.title}}
                             </h3>
                             <p class="mt-15">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                            </p>
+                                {{plan.des}}                          </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
+                    {% for cart in cart %}
                     <div class="col-lg-6">
                         <div class="item md-mb50">
                             <h6 class="type">
-                                استاندارد
+                                {{cart.plan_type}}
                             </h6>
                             <div class="content d-flex align-items-center">
                                 <div class="amount mr-40">
                                     <h2 class="main-color">
-                                        10 میلیون 
+                                       {{cart.price}} میلیون 
                                     </h2>
-                                    <a class="butn butn-md butn-bord radius-30 text-u text-center mt-30" href="#0">
+                                    <a class="butn butn-md butn-bord radius-30 text-u text-center mt-30" href={% url "contact" %}>
                                         <span>
                                             ثبت درخواست
                                         </span>
@@ -108,165 +110,60 @@
                                 </div>
                                 <div class="feat">
                                     <ul class="rest">
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                طراحی وایرفریم
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                طراحی با figma ، framer
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                پیاده سازی با Webflow ، React ، WordPress ، Laravel/PHP
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                ۶ ماه پشتیبانی رایگان
-                                            </span>
-                                        </li>
+                                        {% if cart.ops1 %}
+                                            <li>
+                                                <i class="fas fa-check">
+                                                </i>
+                                                <span>
+                                                    {{cart.ops1}}
+                                                </span>
+                                            </li>
+                                        {% endif %}
+                                        {% if cart.ops2 %}
+                                            <li>
+                                                <i class="fas fa-check">
+                                                </i>
+                                                <span>
+                                                   {{cart.ops2}}
+                                                </span>
+                                            </li>
+                                        {% endif %}
+                                        {% if cart.ops3 %}
+                                            <li>
+                                                <i class="fas fa-check">
+                                                </i>
+                                                <span>
+                                                    {{cart.ops3}}
+                                                </span>
+                                            </li>
+                                        {% endif %}
+                                        {% if cart.ops4 %}
+                                            <li>
+                                                <i class="fas fa-check">
+                                                </i>
+                                                <span>
+                                                    {{cart.ops4}}
+                                                </span>
+                                            </li>
+                                        {% endif %}
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="item">
-                            <h6 class="type">
-                                پریمیرم
-                            </h6>
-                            <div class="content d-flex align-items-center">
-                                <div class="amount mr-40">
-                                    <h2 class="main-color">
-                                        ۱۹ میلیون 
-                                    </h2>
-                                    <a class="butn butn-md butn-bord radius-30 text-u text-center mt-30" href="#0">
-                                        <span>
-                                            ثبت درخواست
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="feat">
-                                    <ul class="rest">
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                طراحی وایرفریم
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                طراحی با figma ، framer
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                پیاده سازی با Webflow ، React ، WordPress ، Laravel/PHP
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-check">
-                                            </i>
-                                            <span>
-                                                ۶ ماه پشتیبانی رایگان
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {% endfor %}
+
                 </div>
             </div>
         </section>
         <!-- ==================== End Pricing ==================== -->
         <!-- ==================== Start Brands ==================== -->
-        <section class="brands section-padding pt-0">
-            <div class="container with-pad">
-                <div class="text-center">
-                    <h6>
-                        بیشتر از
-                        <span class="main-color">
-                            ۲۰۰+ کسب و کار
-                        </span>
-                        در سراسر جهان به ما اعتماد کرد
-                    </h6>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="#0">
-                                    <img alt="" src="assets/imgs/brands/b1.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="#0">
-                                    <img alt="" src="assets/imgs/brands/b2.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="#0">
-                                    <img alt="" src="assets/imgs/brands/b3.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="#0">
-                                    <img alt="" src="assets/imgs/brands/b4.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="#0">
-                                    <img alt="" src="assets/imgs/brands/b1.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-6">
-                        <div class="item">
-                            <div class="img icon-img-100">
-                                <a href="#0">
-                                    <img alt="" src="assets/imgs/brands/b3.png" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- ==================== End Brands ==================== -->
     </main>
 
 {% endblock content %}
+
+
+                

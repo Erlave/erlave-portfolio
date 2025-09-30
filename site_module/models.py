@@ -5,7 +5,7 @@ from django.db import models
 
 
 class site_model (models.Model):
-    site_name = models.CharField(null=True, blank=True,max_length=200, verbose_name='نام سایت')
+    site_name = models.CharField(max_length=200,default="default-name", verbose_name='نام سایت')
     logo=models.ImageField( upload_to='logo', height_field=None, width_field=None, max_length=None , verbose_name='لوگو سایت')
     email=models.EmailField( max_length=254 ,verbose_name='ایمیل')
     phone_number = models.CharField(("شماره تلفن"), max_length=11)
@@ -16,7 +16,7 @@ class site_model (models.Model):
     instagram_link =models.URLField(("لینک اینستاگرام"), max_length=200)
     linkdin_link = models.URLField(("لینک لینکدین"), max_length=200)
 
-    copyright_text=models.CharField(("متن کپی رایت"),null=True ,blank=True , max_length=50)
+    copyright_text=models.CharField(("متن کپی رایت"),default="default-copyright_text", max_length=50)
 
     is_main_setting=models.BooleanField(("تنضیمات اصلی") ,default=False)
 
