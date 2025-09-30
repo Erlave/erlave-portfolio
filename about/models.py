@@ -19,3 +19,15 @@ class about_me_model(models.Model):
     class Meta:
         verbose_name = ' درباره من سکشن 1'
         verbose_name_plural = ' درباره من سکشن 1'
+
+
+class my_ability(models.Model):
+    title=models.CharField(("مهارتت"), max_length=50)
+    icon =models.CharField(("اسم مهارت به اینگلیسی برای ایکون"),null=True,blank=True, max_length=50)
+    percent=models.CharField(("درصد بلدی شما"), max_length=50)
+
+    is_active=models.BooleanField(("فعال /غیر فعال") ,default=False)
+
+    class Meta:
+        verbose_name = ' مهارت های من سکشن 2'
+        verbose_name_plural = ' مهارت های من سکشن 2'

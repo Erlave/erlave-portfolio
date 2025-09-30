@@ -144,6 +144,7 @@
         </section>
         <!-- ==================== End About ==================== -->
         <!-- ==================== Start Skills ==================== -->
+         {% if ability %}
         <section class="skills section-padding pt-0">
             <div class="container with-pad">
                 <div class="sec-head mb-80">
@@ -163,230 +164,38 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-30">
-                            <div class="d-flex align-items-center mb-30">
-                                <div class="mr-30">
-                                    <div class="img icon-img-40">
-                                        <img alt="" src="assets/imgs/resume/s1.png" />
+                    {% for ability in ability %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="item mb-30">
+                                <div class="d-flex align-items-center mb-30">
+                                    <div class="mr-30">
+                                        <div class="img  ">
+                                           <i class="devicon-{{ ability.icon }}-plain " style="font-size: 25px;"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 class="fz-18">
+                                            {{ability.title}}
+                                        </h6>
                                     </div>
                                 </div>
-                                <div>
-                                    <h6 class="fz-18">
-                                        طراحی UI / UX
-                                    </h6>
+                                <div class="skill-progress">
+                                    <span class="progres" data-value="{{ability.percent}}%">
+                                    </span>
                                 </div>
-                            </div>
-                            <div class="skill-progress">
-                                <span class="progres" data-value="95%">
+                                <span class="value">
+                                    {{ability.percent}} ٪
                                 </span>
                             </div>
-                            <span class="value">
-                                ۹۵ ٪
-                            </span>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-30">
-                            <div class="d-flex align-items-center mb-30">
-                                <div class="mr-30">
-                                    <div class="img icon-img-40">
-                                        <img alt="" src="assets/imgs/resume/s2.png" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="fz-18">
-                                        توسعه
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="skill-progress">
-                                <span class="progres" data-value="90%">
-                                </span>
-                            </div>
-                            <span class="value">
-                                ۹۰ ٪
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item md-mb30">
-                            <div class="d-flex align-items-center mb-30">
-                                <div class="mr-30">
-                                    <div class="img icon-img-40">
-                                        <img alt="" src="assets/imgs/resume/s3.png" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="fz-18">
-                                        طراحی گرافیک
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="skill-progress">
-                                <span class="progres" data-value="85%">
-                                </span>
-                            </div>
-                            <span class="value">
-                                ۸۵ ٪
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item md-mb30">
-                            <div class="d-flex align-items-center mb-30">
-                                <div class="mr-30">
-                                    <div class="img icon-img-40">
-                                        <img alt="" src="assets/imgs/resume/s4.png" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="fz-18">
-                                        اری
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="skill-progress">
-                                <span class="progres" data-value="78%">
-                                </span>
-                            </div>
-                            <span class="value">
-                                ۷۸ ٪
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="d-flex align-items-center mb-30">
-                                <div class="mr-30">
-                                    <div class="img icon-img-40">
-                                        <img alt="" src="assets/imgs/resume/s5.png" />
-                                    </div>
-                                </div>
-                                <div>
-                                    <h6 class="fz-18">
-                                        طرح
-                                    </h6>
-                                </div>
-                            </div>
-                            <div class="skill-progress">
-                                <span class="progres" data-value="80%">
-                                </span>
-                            </div>
-                            <span class="value">
-                                ۸۰ ٪
-                            </span>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
+        {% endif %}
         <!-- ==================== End Skills ==================== -->
         <!-- ==================== Start Resume ==================== -->
-        <section class="resume section-padding pt-0">
-            <div class="container with-pad">
-                <div class="sec-head mb-80">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6 text-center">
-                            <div class="d-inline-block">
-                                <div class="sub-title-icon d-flex align-items-center">
-                                    <span class="icon pe-7s-note2">
-                                    </span>
-                                    <h6>
-                                        رزومه من
-                                    </h6>
-                                </div>
-                            </div>
-                            <h3>
-                                آموزش و تجربه
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="resume-swiper" data-carousel="swiper" data-space="50" data-speed="1000">
-                        <div class="swiper-container" data-swiper="container"
-                            id="content-carousel-container-unq-resume">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="item text-center">
-                                        <h6 class="main-color date fz-15 mb-60">
-                                            ۲۰۲۱ - تاکنون
-                                        </h6>
-                                        <h5>
-                                            طراح و توسعه دهنده فریمر
-                                        </h5>
-                                        <span class="opacity-8 fw-500 mt-10">
-                                            [در
-                                            اسنوا]
-                                        </span>
-                                        <p class="fz-13 mt-15">
-                                            ساختن تجربیات دیجیتالی جذاب که کاربران را در قلب طراحی
-                                            قرار می دهد.محصول خود را برای افزایش رضایت و وفاداری کاربر افزایش دهید.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item text-center">
-                                        <h6 class="main-color date fz-15 mb-60">
-                                            ۲۰۱۸ - ۲۰۲۰
-                                        </h6>
-                                        <h5>
-                                            توسعه دهنده وردپرس فرانت‌اند
-                                        </h5>
-                                        <span class="opacity-8 fw-500 mt-10">
-                                            [در
-                                            اسنوا]
-                                        </span>
-                                        <p class="fz-13 mt-15">
-                                            ساختن تجربیات دیجیتالی جذاب که کاربران را در قلب طراحی
-                                            قرار می دهد.محصول خود را برای افزایش رضایت و وفاداری کاربر افزایش دهید.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item text-center">
-                                        <h6 class="main-color date fz-15 mb-60">
-                                            ۲۰۱۵ - ۲۰۱۷
-                                        </h6>
-                                        <h5>
-                                            طراح وب
-                                        </h5>
-                                        <span class="opacity-8 fw-500 mt-10">
-                                            [در راست چین]
-                                        </span>
-                                        <p class="fz-13 mt-15">
-                                            ساختن تجربیات دیجیتالی جذاب که کاربران را در قلب طراحی
-                                            قرار می دهد.محصول خود را برای افزایش رضایت و وفاداری کاربر افزایش دهید.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item text-center">
-                                        <h6 class="main-color date fz-15 mb-60">
-                                            ۲۰۱۰ - ۲۰۱۴
-                                        </h6>
-                                        <h5>
-                                            مدرک لیسانس در طراحی
-                                        </h5>
-                                        <span class="opacity-8 fw-500 mt-10">
-                                            [دانشگاه RMIT
-                                            ایالات متحده]
-                                        </span>
-                                        <p class="fz-13 mt-15">
-                                            ساختن تجربیات دیجیتالی جذاب که کاربران را در قلب طراحی
-                                            قرار می دهد.محصول خود را برای افزایش رضایت و وفاداری کاربر افزایش دهید.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- ==================== End Resume ==================== -->
     </main>
 
