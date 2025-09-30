@@ -20,6 +20,13 @@ class about_me_model(models.Model):
         verbose_name = ' درباره من سکشن 1'
         verbose_name_plural = ' درباره من سکشن 1'
 
+    title=f"{title_1_of_3} {title_2_of_3} {title_3_of_3}"
+
+    def __str__(self):
+        return f"{self.title_1_of_3} {self.title_2_of_3} {self.title_3_of_3}"
+
+
+
 
 class my_ability(models.Model):
     title=models.CharField(("مهارتت"), max_length=50)
@@ -31,3 +38,6 @@ class my_ability(models.Model):
     class Meta:
         verbose_name = ' مهارت های من سکشن 2'
         verbose_name_plural = ' مهارت های من سکشن 2'
+
+    def __str__(self):
+        return self.title

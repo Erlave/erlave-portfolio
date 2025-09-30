@@ -3,7 +3,7 @@ from .models import hi , home_model
 # Create your views here.
 
 def home_view(request):
-    hello = hi.objects.all()
+    hello = hi.objects.filter(is_active=True)
     home = home_model.objects.filter(is_active=True).first()
     context = {'hello':hello,
                'home':home}

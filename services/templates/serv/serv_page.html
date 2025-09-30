@@ -8,6 +8,7 @@
 
     <main class="pt-80">
         <!-- ==================== Start Services ==================== -->
+         {% if serv %}
         <section class="services section-padding">
             <div class="container with-pad">
                 <div class="sec-head mb-80">
@@ -29,27 +30,29 @@
                     </div>
                 </div>
                 <div class="row">
+                    {% for serv in serv %}
                     <div class="col-lg-4 col-md-6">
                         <div class="item mb-30">
                             <div class="cont">
                                 <div class="d-flex align-items-center mb-30">
                                     <div>
                                         <span class="icon-img-50 mr-40">
-                                            <img alt="" src="assets/imgs/serv-img/1.png" />
+                                            {% comment %} <img alt="" src="assets/imgs/serv-img/1.png" /> {% endcomment %}
+                                            <i class="devicon-{{serv.icon}}-plain colored" style="font-size: 55px;"></i>
                                         </span>
                                     </div>
                                     <div>
                                         <span class="opacity-7 fz-13 mb-5">
-                                            ۸ پروژه
+                                            {{serv.projects}} پروژه
                                         </span>
                                         <h5 class="fz-20">
-                                            طراحی وب
+                                            {{serv.title}}
                                         </h5>
                                     </div>
                                 </div>
                                 <p>
-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                                </p>
-                                <a class="mt-30" href="#0">
+                                             {{serv.descreption}}           </p>
+                                <a class="mt-30" href={{serv.url}}>
                                     <span>
                                         بیشتر بخوانید
                                     </span>
@@ -57,149 +60,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-30">
-                            <div class="cont">
-                                <div class="d-flex align-items-center mb-30">
-                                    <div>
-                                        <span class="icon-img-50 mr-40">
-                                            <img alt="" src="assets/imgs/serv-img/2.png" />
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="opacity-7 fz-13 mb-5">
-                                            ۸ پروژه
-                                        </span>
-                                        <h5 class="fz-20">
-                                            طراحی وب
-                                        </h5>
-                                    </div>
-                                </div>
-                                <p>
-لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                                </p>
-                                <a class="mt-30" href="#0">
-                                    <span>
-                                        بیشتر بخوانید
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-30">
-                            <div class="cont">
-                                <div class="d-flex align-items-center mb-30">
-                                    <div>
-                                        <span class="icon-img-50 mr-40">
-                                            <img alt="" src="assets/imgs/serv-img/3.png" />
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="opacity-7 fz-13 mb-5">
-                                            ۸ پروژه
-                                        </span>
-                                        <h5 class="fz-20">
-                                            طراحی وب
-                                        </h5>
-                                    </div>
-                                </div>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                                </p>
-                                <a class="mt-30" href="#0">
-                                    <span>
-                                        بیشتر بخوانید
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item md-mb30">
-                            <div class="cont">
-                                <div class="d-flex align-items-center mb-30">
-                                    <div>
-                                        <span class="icon-img-50 mr-40">
-                                            <img alt="" src="assets/imgs/serv-img/4.png" />
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="opacity-7 fz-13 mb-5">
-                                            ۸ پروژه
-                                        </span>
-                                        <h5 class="fz-20">
-                                            طراحی وب
-                                        </h5>
-                                    </div>
-                                </div>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                                </p>
-                                <a class="mt-30" href="#0">
-                                    <span>
-                                        بیشتر بخوانید
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item sm-mb30">
-                            <div class="cont">
-                                <div class="d-flex align-items-center mb-30">
-                                    <div>
-                                        <span class="icon-img-50 mr-40">
-                                            <img alt="" src="assets/imgs/serv-img/1.png" />
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="opacity-7 fz-13 mb-5">
-                                            ۸ پروژه
-                                        </span>
-                                        <h5 class="fz-20">
-                                            طراحی وب
-                                        </h5>
-                                    </div>
-                                </div>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                                </p>
-                                <a class="mt-30" href="#0">
-                                    <span>
-                                        بیشتر
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="cont">
-                                <div class="d-flex align-items-center mb-30">
-                                    <div>
-                                        <span class="icon-img-50 mr-40">
-                                            <img alt="" src="assets/imgs/serv-img/1.png" />
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <span class="opacity-7 fz-13 mb-5">
-                                            ۸ پروژه
-                                        </span>
-                                        <h5 class="fz-20">
-                                            طراحی وب
-                                        </h5>
-                                    </div>
-                                </div>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز                                </p>
-                                <a class="mt-30" href="#0">
-                                    <span>
-                                        بیشتر بخوانید
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
+        {% endif %}
         <!-- ==================== End Services ==================== -->
         <!-- ==================== Start Pricing ==================== -->
         <section class="price section-padding pt-0">

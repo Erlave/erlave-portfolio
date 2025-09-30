@@ -3,10 +3,13 @@ from django.db import models
 # Create your models here.
 class hi(models.Model):
     title=models.CharField(("سلام من ... هستم"), max_length=50)
-
+    is_active=models.BooleanField(("فعال/ غیر فعال") , default=False)
     class Meta:
         verbose_name = 'سلام من ... هستم'
         verbose_name_plural = 'سلام من ... هستم'
+
+    def __str__(self):
+        return self.title
 
 
 
@@ -27,6 +30,6 @@ class home_model (models.Model):
         verbose_name = 'تنظیمات خانه'
         verbose_name_plural = ' تنظیمات خانه' 
 
-    title =f'{title_1_of_3} {title_2_of_3} {title_3_of_3}'
+
     def __str__(self):
-        return self.title
+        return f"{self.title_1_of_3} {self.title_2_of_3} {self.title_3_of_3}"
