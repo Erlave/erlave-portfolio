@@ -723,3 +723,40 @@ $(function () {
         });
     }
 });
+
+
+
+// اگر jQuery دارید:
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+          }
+      }
+  }
+  return cookieValue;
+}
+$.ajaxSetup({
+  headers: { "X-CSRFToken": getCookie('csrftoken') }
+});
+
+$('#contact-form').on('submit', function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: CONTACT_URL,            // <-- مطمئن شید این متغیر در قالب بالا گذاشته شده
+    type: 'POST',
+    data: $(this).serialize(),   // شامل csrfmiddlewaretoken اگر {% csrf_token %} داخل فرم باشد
+    success: function(resp){
+      // نمایش پیام موفقیت بدون رفرش
+      alert('پیام شما ثبت شد');
+    },
+    error: function(xhr){
+      alert('ارسال ناموفق: ' + xhr.status);
+    }
+  });
+});

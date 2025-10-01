@@ -90,8 +90,8 @@
                     </div>
                     <div class="col-lg-7 valign">
                         <div class="full-width">
-                            <form action="https://ui-themez.smartinnovates.net/items/Gilb/contact.php" id="contact-form"
-                                method="post">
+                            <form method="post"  action="{% url 'contact' %}" >
+                                {% csrf_token %}
                                 <div class="messages">
                                 </div>
                                 <div class="controls row">
@@ -116,7 +116,7 @@
                                             <label>
                                                 پیام شما
                                             </label>
-                                            <textarea id="form_message" name="message" required="required"></textarea>
+                                            <textarea id="form_message" name="massage" required="required"></textarea>
                                         </div>
                                         <div class="mt-30">
                                             <button type="submit">

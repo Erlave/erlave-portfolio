@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('erlave/' ,views.contact_view, name='contact'),
+    path('erlave/' ,views.ContactView.as_view(), name='contact'),
 ]
     
 
