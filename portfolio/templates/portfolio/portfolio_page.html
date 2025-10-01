@@ -23,34 +23,59 @@
                                 </div>
                             </div>
                             <h3>
-                                من به برند ها کمک میکنم
-                                <br />
-                                 با طراحی و توسعه رشد کنند 
+                                {{title.title}}
                             </h3>
                         </div>
                     </div>
                 </div>
                 <div class="gallery">
                     <div class="row">
+                        {% for port in port %}
                         <div class="col-lg-4 items">
                             <div class="item">
                                 <div class="img">
-                                    <img alt="" src="assets/imgs/works/1.jpg" />
-                                    <a class="link" href="project-details.html">
+                                    <img alt="" src={{port.img.url}} />
+                                    {% if port.url_github %}
+                                    <a class="link" href={{port.url_github}}>
                                     </a>
+                                    {% endif %}
                                 </div>
                                 <div class="cont d-flex align-items-center">
                                     <div>
                                         <h6>
-                                            طراحی UI-ux
+                                            {{port.title}}
                                         </h6>
+
+
+                                        {% if port.type1 %}
                                         <span class="tag">
-                                            شکل
+                                            {{port.type1}}
                                         </span>
+                                        {% endif %}
+
+                                        {% if port.type2 %}
+                                        <span class="tag">
+                                            {{port.type2}}
+                                        </span>
+                                        {% endif %}
+
+                                        {% if port.type3 %}
+                                        <span class="tag">
+                                            {{port.type3}}
+                                        </span>
+                                        {% endif %}
+
+                                        {% if port.type4 %}
+                                        <span class="tag">
+                                            {{port.type4}}
+                                        </span>
+                                        {% endif %}
+                                        
                                     </div>
+                                    {% if port.url_github %}
                                     <div class="ml-auto">
                                         <div class="arrow">
-                                            <a href="project-details.html">
+                                            <a href={{port.url_github}}>
                                                 <svg class="arrow-right" style="stroke-width: 2;"
                                                     viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -65,268 +90,19 @@
                                             </a>
                                         </div>
                                     </div>
+                                    {% endif %}
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/2.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            شکل
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/3.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            شکل
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/4.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            شکل
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/6.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            شکل
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/5.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            شکل
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/7.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            Figma
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 items">
-                            <div class="item">
-                                <div class="img">
-                                    <img alt="" src="assets/imgs/works/8.jpg" />
-                                    <a class="link" href="project-details.html">
-                                    </a>
-                                </div>
-                                <div class="cont d-flex align-items-center">
-                                    <div>
-                                        <h6>
-                                            طراحی UI-ux
-                                        </h6>
-                                        <span class="tag">
-                                            شکل
-                                        </span>
-                                    </div>
-                                    <div class="ml-auto">
-                                        <div class="arrow">
-                                            <a href="project-details.html">
-                                                <svg class="arrow-right" style="stroke-width: 2;"
-                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                    <line x1="0" x2="33" y1="16" y2="16">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                    </line>
-                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                    </line>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </section>
         <!-- ==================== End portfolio ==================== -->
         <!-- ==================== Start Testimonials ==================== -->
-        <section class="testimonials section-padding pt-0">
+        {% comment %} <section class="testimonials section-padding pt-0">
             <div class="container with-pad">
                 <div class="sec-head mb-80">
                     <div class="row justify-content-center">
@@ -602,7 +378,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!-- ==================== End Testimonials ==================== -->
     </main>
 
