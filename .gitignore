@@ -10,6 +10,7 @@ pycache/
 
 # پایگاه داده محلی (sqlite3)
 erlave-db.sqlite3
+media/
 
 # لاگ‌ها
 *.log

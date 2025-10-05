@@ -5,7 +5,7 @@ class contact(models.Model):
     name=models.CharField(("نام مشتری"), max_length=100)
     email=models.EmailField(("ایمیل مشتری"), max_length=254)
     massage=models.TextField(("پیام مشتری"), max_length=300)
-    created_at = models.DateTimeField(auto_now_add=True)
+    # created_at = models.DateTimeField(auto_now_add=True)
     is_read_admin=models.BooleanField(("خوانده شده/خوانده نشده") ,default=False)
 
 
